@@ -14,3 +14,8 @@ reports, errors, commits, packages, or CI artifacts.
 
 Dataset admission never grants authorization and never weakens classification,
 target, provider/network, offline, deadline, resource, or verification policy.
+
+CI uses read-only repository permissions and no project secrets. Repository
+validation rejects corpus-like archives/data files, recognized secret formats,
+runtime dependencies, and proprietary provider SDK markers. These checks are
+defence in depth and do not replace source, licence, or human security review.
