@@ -24,3 +24,8 @@ The first proposed gate is
 [`P6_TOKENIZER_CORPUS_GATE.md`](P6_TOKENIZER_CORPUS_GATE.md). No corpus work may
 start until that exact revision receives owner architecture/security/licence
 acceptance, passes CI, is merged, and post-merge `main` is verified.
+
+The separately reviewed validation scaffold is documented in
+[`P6_CI_VALIDATION_SCAFFOLD.md`](P6_CI_VALIDATION_SCAFFOLD.md). Its package is
+an intentionally empty namespace-safe boundary; validation success cannot
+authorize data acquisition, admission, training, or artifact promotion.

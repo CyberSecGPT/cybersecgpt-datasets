@@ -12,3 +12,16 @@ Architecture/security/licence gates precede implementation. Changes require
 focused tests, the complete supported validation matrix, exact distribution
 verification, final diff and security review, exact-head owner acceptance, and
 post-merge verification.
+
+Run the unchanged local gate with:
+
+```text
+python -m ruff check .
+python -m black --check .
+python -m mypy src scripts
+python scripts/validate_repository.py
+python -m pip check
+python -m pytest --cov=cybersecgpt.datasets --cov-report=term-missing --cov-fail-under=100
+python -m build
+python scripts/verify_distribution.py dist
+```

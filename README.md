@@ -8,6 +8,10 @@ The repository is being initialized for the P6 Tokenizer v1 corpus snapshot.
 No corpus, source, snapshot, training input, tokenizer artifact, or production
 approval exists yet.
 
+Repository validation is offline-capable and cannot grant authorization. The
+Python 3.11–3.13 CI and exact distribution boundary are defined in
+[`docs/P6_CI_VALIDATION_SCAFFOLD.md`](docs/P6_CI_VALIDATION_SCAFFOLD.md).
+
 The proposed first policy permits only deterministic first-party generated
 fixtures and sources independently verified as public domain or CC0. Public
 availability alone is never sufficient. See
