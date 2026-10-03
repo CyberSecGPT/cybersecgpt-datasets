@@ -18,13 +18,16 @@ REQUIRED_FILES = frozenset(
         "SECURITY.md",
         "docs/ARCHITECTURE.md",
         "docs/P6_CI_VALIDATION_SCAFFOLD.md",
+        "docs/P6_CORPUS_MANIFEST_CONTRACTS.md",
         "docs/P6_TOKENIZER_CORPUS_GATE.md",
         "pyproject.toml",
         "scripts/validate_repository.py",
         "scripts/verify_distribution.py",
         "src/cybersecgpt/datasets/__init__.py",
+        "src/cybersecgpt/datasets/corpus_manifest.py",
         "src/cybersecgpt/datasets/py.typed",
         "tests/__init__.py",
+        "tests/test_corpus_manifest.py",
         "tests/test_public_api.py",
     }
 )
