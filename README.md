@@ -11,6 +11,9 @@ approval exists yet.
 Repository validation is offline-capable and cannot grant authorization. The
 Python 3.11–3.13 CI and exact distribution boundary are defined in
 [`docs/P6_CI_VALIDATION_SCAFFOLD.md`](docs/P6_CI_VALIDATION_SCAFFOLD.md).
+The first implementation increment defines only bounded canonical manifest
+contracts; see
+[`docs/P6_CORPUS_MANIFEST_CONTRACTS.md`](docs/P6_CORPUS_MANIFEST_CONTRACTS.md).
 
 The proposed first policy permits only deterministic first-party generated
 fixtures and sources independently verified as public domain or CC0. Public

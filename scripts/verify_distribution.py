@@ -9,6 +9,7 @@ from pathlib import Path
 EXPECTED_SOURCE_MEMBERS = frozenset(
     {
         "cybersecgpt/datasets/__init__.py",
+        "cybersecgpt/datasets/corpus_manifest.py",
         "cybersecgpt/datasets/py.typed",
     }
 )
@@ -21,6 +22,7 @@ EXPECTED_SDIST_MEMBERS = frozenset(
         "SECURITY.md",
         "pyproject.toml",
         "src/cybersecgpt/datasets/__init__.py",
+        "src/cybersecgpt/datasets/corpus_manifest.py",
         "src/cybersecgpt/datasets/py.typed",
     }
 )
