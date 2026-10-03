@@ -29,3 +29,8 @@ The separately reviewed validation scaffold is documented in
 [`P6_CI_VALIDATION_SCAFFOLD.md`](P6_CI_VALIDATION_SCAFFOLD.md). Its package is
 an intentionally empty namespace-safe boundary; validation success cannot
 authorize data acquisition, admission, training, or artifact promotion.
+
+The first implementation increment is limited to the immutable manifest
+contracts in [`P6_CORPUS_MANIFEST_CONTRACTS.md`](P6_CORPUS_MANIFEST_CONTRACTS.md).
+It introduces no corpus bytes, acquisition, construction, admission, or
+training authority.
