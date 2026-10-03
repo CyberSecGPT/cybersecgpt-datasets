@@ -34,3 +34,9 @@ The first implementation increment is limited to the immutable manifest
 contracts in [`P6_CORPUS_MANIFEST_CONTRACTS.md`](P6_CORPUS_MANIFEST_CONTRACTS.md).
 It introduces no corpus bytes, acquisition, construction, admission, or
 training authority.
+
+The next proposed implementation increment is gated by
+[`P6_FIXTURE_BUILDER_GATE.md`](P6_FIXTURE_BUILDER_GATE.md). It is limited to
+deterministic first-party fixture generators and a network-disabled
+builder/replay verifier. No implementation may begin until that gate's exact
+head is accepted, merged, and verified on `main`.
