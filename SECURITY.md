@@ -19,3 +19,7 @@ CI uses read-only repository permissions and no project secrets. Repository
 validation rejects corpus-like archives/data files, recognized secret formats,
 runtime dependencies, and proprietary provider SDK markers. These checks are
 defence in depth and do not replace source, licence, or human security review.
+
+Manifest validation is content-minimizing and in-memory only. A structurally
+valid or sealed manifest is integrity evidence, never authorization, licence
+approval, snapshot admission, training approval, or artifact approval.
