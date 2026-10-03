@@ -14,6 +14,10 @@ Python 3.11–3.13 CI and exact distribution boundary are defined in
 The first implementation increment defines only bounded canonical manifest
 contracts; see
 [`docs/P6_CORPUS_MANIFEST_CONTRACTS.md`](docs/P6_CORPUS_MANIFEST_CONTRACTS.md).
+The proposed next implementation boundary—deterministic first-party fixture
+generation and network-disabled builder/replay—is defined in
+[`docs/P6_FIXTURE_BUILDER_GATE.md`](docs/P6_FIXTURE_BUILDER_GATE.md). It grants
+no authorization to implement until its exact revision is accepted.
 
 The proposed first policy permits only deterministic first-party generated
 fixtures and sources independently verified as public domain or CC0. Public

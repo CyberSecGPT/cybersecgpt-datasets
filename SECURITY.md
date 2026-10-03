@@ -23,3 +23,8 @@ defence in depth and do not replace source, licence, or human security review.
 Manifest validation is content-minimizing and in-memory only. A structurally
 valid or sealed manifest is integrity evidence, never authorization, licence
 approval, snapshot admission, training approval, or artifact approval.
+
+The proposed fixture/builder gate permits no external acquisition or copied
+third-party expression. Generator and builder output remains untrusted;
+uncertain rights, provenance, safety, contamination, filtering, or replay
+results fail closed and cannot be converted into snapshot admission.

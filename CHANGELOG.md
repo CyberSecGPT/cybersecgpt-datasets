@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Propose the separately reviewed architecture, security, and licence gate for
+  deterministic first-party fixture generation and offline builder replay.
+
 - Add bounded canonical source, rights, transformation, sample, exclusion, and
   snapshot manifest contracts without corpus construction or training.
 
