@@ -28,3 +28,12 @@ The proposed fixture/builder gate permits no external acquisition or copied
 third-party expression. Generator and builder output remains untrusted;
 uncertain rights, provenance, safety, contamination, filtering, or replay
 results fail closed and cannot be converted into snapshot admission.
+
+The fixture builder accepts only immutable reviewed first-party generator
+definitions. It binds every generator to an independently approved source
+record, has no network or execution primitive, enforces explicit cancellation,
+deadline, input-count and byte ceilings, and reports only a fixed generic error.
+Secret-, personal-data-, executable-, prompt-injection- and contamination-shaped
+fixtures are excluded without echoing raw values. Exact duplicates are removed
+before stable sample identities and a sealed manifest candidate are produced.
+Replay mismatch remains terminal and cannot be reinterpreted as acceptance.

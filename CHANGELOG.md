@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- Implement deterministic first-party in-memory fixture generation, exact
+  source-approval binding, fixed-order offline filtering and deduplication,
+  sealed manifest candidates, and network-disabled deterministic replay with
+  fail-closed bounds and content-minimized diagnostics.
+
 - Propose the separately reviewed architecture, security, and licence gate for
   deterministic first-party fixture generation and offline builder replay.
 

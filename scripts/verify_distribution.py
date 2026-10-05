@@ -10,6 +10,7 @@ EXPECTED_SOURCE_MEMBERS = frozenset(
     {
         "cybersecgpt/datasets/__init__.py",
         "cybersecgpt/datasets/corpus_manifest.py",
+        "cybersecgpt/datasets/fixture_builder.py",
         "cybersecgpt/datasets/py.typed",
     }
 )
@@ -23,6 +24,7 @@ EXPECTED_SDIST_MEMBERS = frozenset(
         "pyproject.toml",
         "src/cybersecgpt/datasets/__init__.py",
         "src/cybersecgpt/datasets/corpus_manifest.py",
+        "src/cybersecgpt/datasets/fixture_builder.py",
         "src/cybersecgpt/datasets/py.typed",
     }
 )

@@ -35,8 +35,16 @@ contracts in [`P6_CORPUS_MANIFEST_CONTRACTS.md`](P6_CORPUS_MANIFEST_CONTRACTS.md
 It introduces no corpus bytes, acquisition, construction, admission, or
 training authority.
 
-The next proposed implementation increment is gated by
-[`P6_FIXTURE_BUILDER_GATE.md`](P6_FIXTURE_BUILDER_GATE.md). It is limited to
-deterministic first-party fixture generators and a network-disabled
-builder/replay verifier. No implementation may begin until that gate's exact
-head is accepted, merged, and verified on `main`.
+The deterministic first-party fixture implementation is governed by
+[`P6_FIXTURE_BUILDER_GATE.md`](P6_FIXTURE_BUILDER_GATE.md). Immutable generator
+definitions bind source commit, policy, configuration, provenance and seed
+state to approved first-party source records. Construction normalizes UTF-8/LF
+bytes, applies content checks, exact-digest deduplication and stable ordering,
+then seals the existing manifest contract. Replay regenerates from the same
+pinned inputs and compares the complete immutable result.
+
+The implementation performs no acquisition, network access, external command,
+dynamic import, callback, plugin, unsafe deserialization or execution. Raw
+generated fixtures exist only in memory and are absent from package and source
+distribution boundaries. A successful build or replay is evidence, not
+authorization, corpus admission, licence approval or training approval.

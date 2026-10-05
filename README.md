@@ -14,10 +14,17 @@ Python 3.11–3.13 CI and exact distribution boundary are defined in
 The first implementation increment defines only bounded canonical manifest
 contracts; see
 [`docs/P6_CORPUS_MANIFEST_CONTRACTS.md`](docs/P6_CORPUS_MANIFEST_CONTRACTS.md).
-The proposed next implementation boundary—deterministic first-party fixture
-generation and network-disabled builder/replay—is defined in
-[`docs/P6_FIXTURE_BUILDER_GATE.md`](docs/P6_FIXTURE_BUILDER_GATE.md). It grants
-no authorization to implement until its exact revision is accepted.
+The deterministic first-party fixture generator and network-disabled
+builder/replay implementation is governed by
+[`docs/P6_FIXTURE_BUILDER_GATE.md`](docs/P6_FIXTURE_BUILDER_GATE.md). It binds
+reviewed source approvals to generator configuration, produces only fictional
+in-memory fixtures, filters and deduplicates in a fixed order, seals a
+content-minimized manifest candidate, and verifies byte-identical replay without
+network access. Generated corpus bytes remain outside Git and distributions.
+
+This implementation produces evidence only. It does not admit a corpus
+snapshot, authorize training, approve a licence, promote a tokenizer artifact,
+or grant any execution authority.
 
 The proposed first policy permits only deterministic first-party generated
 fixtures and sources independently verified as public domain or CC0. Public
