@@ -11,6 +11,18 @@ from cybersecgpt.datasets.corpus_manifest import (
     SourceKind,
     TransformationRecord,
 )
+from cybersecgpt.datasets.fixture_builder import (
+    GENERATOR_SCHEMA_VERSION,
+    BuildRequest,
+    BuildResult,
+    FixtureBuildError,
+    FixtureGenerator,
+    FixtureTemplate,
+    GeneratedFixture,
+    build_fixture_corpus,
+    generate_fixtures,
+    verify_fixture_replay,
+)
 
 __all__ = (
     "MANIFEST_SCHEMA_VERSION",
@@ -22,4 +34,14 @@ __all__ = (
     "SourceApprovalRecord",
     "SourceKind",
     "TransformationRecord",
+    "GENERATOR_SCHEMA_VERSION",
+    "BuildRequest",
+    "BuildResult",
+    "FixtureBuildError",
+    "FixtureGenerator",
+    "FixtureTemplate",
+    "GeneratedFixture",
+    "build_fixture_corpus",
+    "generate_fixtures",
+    "verify_fixture_replay",
 )

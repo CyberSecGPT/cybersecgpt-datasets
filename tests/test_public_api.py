@@ -14,5 +14,15 @@ def test_public_api_is_explicit() -> None:
         "SourceApprovalRecord",
         "SourceKind",
         "TransformationRecord",
+        "GENERATOR_SCHEMA_VERSION",
+        "BuildRequest",
+        "BuildResult",
+        "FixtureBuildError",
+        "FixtureGenerator",
+        "FixtureTemplate",
+        "GeneratedFixture",
+        "build_fixture_corpus",
+        "generate_fixtures",
+        "verify_fixture_replay",
     )
     assert datasets.__doc__ == "CyberSecGPT dataset governance package boundary."
