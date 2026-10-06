@@ -2,8 +2,10 @@
 
 ## Status
 
-**Proposed — exact-head project-owner architecture, security, and licence
-acceptance is required before implementation.**
+**Accepted — project-owner acceptance was recorded for PR #6 head
+`c290cb24a11a5e4f4ce504917363b06e1744bcf5`; squash-merged as
+`602907fd8ae45443f1c210c09a9b5b2c2d92373c`; pre-merge CI run #9 and
+post-merge `main` CI run #10 passed.**
 
 This gate authorizes only the reviewed preparation of one bounded, deterministic,
 first-party-generated Tokenizer v1 pilot snapshot and its content-minimized

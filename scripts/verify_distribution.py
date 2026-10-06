@@ -11,6 +11,7 @@ EXPECTED_SOURCE_MEMBERS = frozenset(
         "cybersecgpt/datasets/__init__.py",
         "cybersecgpt/datasets/corpus_manifest.py",
         "cybersecgpt/datasets/fixture_builder.py",
+        "cybersecgpt/datasets/first_party_generators.py",
         "cybersecgpt/datasets/py.typed",
     }
 )
@@ -25,6 +26,7 @@ EXPECTED_SDIST_MEMBERS = frozenset(
         "src/cybersecgpt/datasets/__init__.py",
         "src/cybersecgpt/datasets/corpus_manifest.py",
         "src/cybersecgpt/datasets/fixture_builder.py",
+        "src/cybersecgpt/datasets/first_party_generators.py",
         "src/cybersecgpt/datasets/py.typed",
     }
 )
