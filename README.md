@@ -26,6 +26,13 @@ This implementation produces evidence only. It does not admit a corpus
 snapshot, authorize training, approve a licence, promote a tokenizer artifact,
 or grant any execution authority.
 
+The proposed next boundary is the two-stage, first-party-only snapshot process
+in
+[`docs/P6_FIRST_PARTY_SNAPSHOT_GATE.md`](docs/P6_FIRST_PARTY_SNAPSHOT_GATE.md).
+It requires exact generator-source acceptance before an exact 1,024-sample
+snapshot and tokenizer admission projection may be proposed. The gate itself
+approves no source, snapshot, training run, or tokenizer artifact.
+
 The proposed first policy permits only deterministic first-party generated
 fixtures and sources independently verified as public domain or CC0. Public
 availability alone is never sufficient. See
