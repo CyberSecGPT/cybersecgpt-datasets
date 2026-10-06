@@ -11,6 +11,18 @@ from cybersecgpt.datasets.corpus_manifest import (
     SourceKind,
     TransformationRecord,
 )
+from cybersecgpt.datasets.first_party_generators import (
+    FIRST_PARTY_GENERATOR_COUNT,
+    FIRST_PARTY_GENERATOR_PROFILE_VERSION,
+    FIRST_PARTY_LICENSE_EXPRESSION,
+    FIRST_PARTY_POLICY_SHA256,
+    FIRST_PARTY_REVIEW_EVIDENCE_SCHEMA_VERSION,
+    FIRST_PARTY_SAMPLE_COUNT,
+    FirstPartyGeneratorEvidence,
+    FirstPartyGeneratorRecord,
+    first_party_generator_evidence,
+    first_party_generators,
+)
 from cybersecgpt.datasets.fixture_builder import (
     GENERATOR_SCHEMA_VERSION,
     BuildRequest,
@@ -44,4 +56,14 @@ __all__ = (
     "build_fixture_corpus",
     "generate_fixtures",
     "verify_fixture_replay",
+    "FIRST_PARTY_GENERATOR_COUNT",
+    "FIRST_PARTY_GENERATOR_PROFILE_VERSION",
+    "FIRST_PARTY_LICENSE_EXPRESSION",
+    "FIRST_PARTY_POLICY_SHA256",
+    "FIRST_PARTY_REVIEW_EVIDENCE_SCHEMA_VERSION",
+    "FIRST_PARTY_SAMPLE_COUNT",
+    "FirstPartyGeneratorEvidence",
+    "FirstPartyGeneratorRecord",
+    "first_party_generator_evidence",
+    "first_party_generators",
 )

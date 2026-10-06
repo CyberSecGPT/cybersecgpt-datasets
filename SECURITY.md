@@ -38,10 +38,16 @@ fixtures are excluded without echoing raw values. Exact duplicates are removed
 before stable sample identities and a sealed manifest candidate are produced.
 Replay mismatch remains terminal and cannot be reinterpreted as acceptance.
 
-The proposed first-party snapshot gate separates generator-source acceptance
+The accepted first-party snapshot gate separates generator-source acceptance
 from later snapshot admission so review decisions cannot be asserted
 retroactively. Cross-repository admission uses exact local revisions and a
 content-minimized deterministic projection; it creates no runtime dependency.
 Missing, excluded, duplicate, reordered, changed, rights-ineligible, unsafe,
 cancelled, expired, over-limit, projection-mismatched, or replay-mismatched
 content blocks the whole candidate and cannot be retried under weaker controls.
+
+The stage-1 generator proposal consumes no external input and requires its exact
+accepted Git revision as an explicit argument. Its automated evidence contains
+only identities, counts, byte counts, domain counts, and digests. A zero unsafe
+or duplicate count cannot approve rights, safety, or contamination; no approved
+source record exists until the owner accepts the exact proposal head.

@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Add the exact eight-family first-party generator-source proposal for 1,024
+  bounded in-memory samples, with deterministic content-minimized review
+  evidence and no pre-recorded approval or snapshot admission.
+
 - Propose the separately reviewed, two-stage architecture, security, and
   licence gate for exact first-party generator review followed by a bounded
   1,024-sample corpus snapshot and tokenizer admission projection.

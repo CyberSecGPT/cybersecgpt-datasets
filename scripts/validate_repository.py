@@ -19,6 +19,7 @@ REQUIRED_FILES = frozenset(
         "docs/ARCHITECTURE.md",
         "docs/P6_CI_VALIDATION_SCAFFOLD.md",
         "docs/P6_CORPUS_MANIFEST_CONTRACTS.md",
+        "docs/P6_FIRST_PARTY_GENERATOR_SOURCE_EVIDENCE.md",
         "docs/P6_FIRST_PARTY_SNAPSHOT_GATE.md",
         "docs/P6_FIXTURE_BUILDER_GATE.md",
         "docs/P6_TOKENIZER_CORPUS_GATE.md",
@@ -28,10 +29,12 @@ REQUIRED_FILES = frozenset(
         "src/cybersecgpt/datasets/__init__.py",
         "src/cybersecgpt/datasets/corpus_manifest.py",
         "src/cybersecgpt/datasets/fixture_builder.py",
+        "src/cybersecgpt/datasets/first_party_generators.py",
         "src/cybersecgpt/datasets/py.typed",
         "tests/__init__.py",
         "tests/test_corpus_manifest.py",
         "tests/test_fixture_builder.py",
+        "tests/test_first_party_generators.py",
         "tests/test_public_api.py",
     }
 )
@@ -106,6 +109,14 @@ def main() -> None:
     readme = (ROOT / "README.md").read_text(encoding="utf-8").lower()
     _require("offline" in readme, "README must preserve offline operation")
     _require("authorization" in readme, "README must preserve non-authorization")
+    proposal = (ROOT / "src/cybersecgpt/datasets/first_party_generators.py").read_text(
+        encoding="utf-8"
+    )
+    _require(
+        "SourceApprovalRecord" not in proposal
+        and "build_fixture_corpus" not in proposal,
+        "generator-source proposal must not create approvals or snapshots",
+    )
     print("Dataset repository validation passed.")
 
 
