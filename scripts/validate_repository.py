@@ -19,6 +19,7 @@ REQUIRED_FILES = frozenset(
         "docs/ARCHITECTURE.md",
         "docs/P6_CI_VALIDATION_SCAFFOLD.md",
         "docs/P6_CORPUS_MANIFEST_CONTRACTS.md",
+        "docs/P6_FIRST_PARTY_SNAPSHOT_GATE.md",
         "docs/P6_FIXTURE_BUILDER_GATE.md",
         "docs/P6_TOKENIZER_CORPUS_GATE.md",
         "pyproject.toml",

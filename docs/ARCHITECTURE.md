@@ -48,3 +48,12 @@ dynamic import, callback, plugin, unsafe deserialization or execution. Raw
 generated fixtures exist only in memory and are absent from package and source
 distribution boundaries. A successful build or replay is evidence, not
 authorization, corpus admission, licence approval or training approval.
+
+The proposed
+[`P6_FIRST_PARTY_SNAPSHOT_GATE.md`](P6_FIRST_PARTY_SNAPSHOT_GATE.md) preserves
+the dataset/tokenizer L0 boundary while defining the next review sequence. Exact
+generator source must first receive owner rights, safety, and contamination
+acceptance. A later snapshot proposal may then construct and replay 1,024
+first-party samples, produce a canonical dataset manifest, and verify a
+deterministic projection with the exact tokenizer admission verifier. Neither
+stage adds a production cross-repository import or authorizes training.

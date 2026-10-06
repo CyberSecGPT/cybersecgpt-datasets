@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Propose the separately reviewed, two-stage architecture, security, and
+  licence gate for exact first-party generator review followed by a bounded
+  1,024-sample corpus snapshot and tokenizer admission projection.
+
 - Implement deterministic first-party in-memory fixture generation, exact
   source-approval binding, fixed-order offline filtering and deduplication,
   sealed manifest candidates, and network-disabled deterministic replay with

@@ -37,3 +37,11 @@ Secret-, personal-data-, executable-, prompt-injection- and contamination-shaped
 fixtures are excluded without echoing raw values. Exact duplicates are removed
 before stable sample identities and a sealed manifest candidate are produced.
 Replay mismatch remains terminal and cannot be reinterpreted as acceptance.
+
+The proposed first-party snapshot gate separates generator-source acceptance
+from later snapshot admission so review decisions cannot be asserted
+retroactively. Cross-repository admission uses exact local revisions and a
+content-minimized deterministic projection; it creates no runtime dependency.
+Missing, excluded, duplicate, reordered, changed, rights-ineligible, unsafe,
+cancelled, expired, over-limit, projection-mismatched, or replay-mismatched
+content blocks the whole candidate and cannot be retried under weaker controls.
