@@ -30,11 +30,13 @@ REQUIRED_FILES = frozenset(
         "src/cybersecgpt/datasets/corpus_manifest.py",
         "src/cybersecgpt/datasets/fixture_builder.py",
         "src/cybersecgpt/datasets/first_party_generators.py",
+        "src/cybersecgpt/datasets/first_party_snapshot.py",
         "src/cybersecgpt/datasets/py.typed",
         "tests/__init__.py",
         "tests/test_corpus_manifest.py",
         "tests/test_fixture_builder.py",
         "tests/test_first_party_generators.py",
+        "tests/test_first_party_snapshot.py",
         "tests/test_public_api.py",
     }
 )
