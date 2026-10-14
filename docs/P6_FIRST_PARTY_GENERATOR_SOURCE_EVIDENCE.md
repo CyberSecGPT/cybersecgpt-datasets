@@ -2,12 +2,15 @@
 
 ## Status
 
-**Pending exact-head project-owner architecture, security, licence, safety, and
-contamination acceptance.**
+**Accepted — project-owner acceptance was recorded for PR #7 head
+`1e67188772c9960900769d6e3f74e615c593d049`; squash-merged as
+`d01118721ff9f28fdc895b7a76687eb88a9055fe`; pre-merge CI run #11 and
+post-merge `main` CI run #12 passed.**
 
-This record proposes exact generator source for review. It is technical evidence
-only: it records no approved `SourceApprovalRecord`, admits no corpus snapshot,
-authorizes no training, and grants no execution authority.
+This record preserves the exact generator source that received owner review.
+Acceptance authorizes the separately reviewed creation of matching
+`SourceApprovalRecord` values and snapshot evidence only; it does not admit a
+corpus snapshot, authorize a training run, or grant execution authority.
 
 ## Accepted parent gate
 
@@ -84,10 +87,10 @@ The evidence retains IDs, counts, byte counts, domain counts, and SHA-256
 identities only. Expanded fixture bytes remain in memory and are not written to
 Git, distributions, logs, test reports, CI artifacts, caches, or this record.
 
-## Pending owner decisions
+## Recorded owner decision
 
-No decision is pre-recorded. Exact-head acceptance must explicitly approve or
-reject the newly authored source for each of:
+PR #7 comment `6011109292` records owner acceptance of the exact head for each
+of:
 
 1. generation or acquisition;
 2. deterministic processing;
@@ -95,9 +98,11 @@ reject the newly authored source for each of:
 4. derived statistics; and
 5. Tokenizer v1 artifact distribution under the recorded limitations.
 
-It must also decide safety and contamination independently. Until all decisions
-are explicitly accepted, the source is ineligible for an approved source record
-and cannot be passed to the snapshot builder.
+The same decision accepts safety and contamination. Its canonical decision-text
+SHA-256 is
+`02b9e9a050189d4b7c7471410a40326efcac07509f86963274eba46c3dae044e`.
+Only records matching that exact source and the recorded limitations are
+eligible for the separately reviewed snapshot candidate.
 
 Automated rejection scans are only defence-in-depth evidence. Zero automated
 findings do not prove originality, legal usability, safety, or absence of

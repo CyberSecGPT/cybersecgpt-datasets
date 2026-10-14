@@ -4,9 +4,10 @@ Authoritative repository for CyberSecGPT dataset governance, provenance,
 licensing, deterministic corpus construction, filtering, deduplication,
 versioning, validation, and reproducible snapshot publication.
 
-The repository is being initialized for the P6 Tokenizer v1 corpus snapshot.
-No corpus, source, snapshot, training input, tokenizer artifact, or production
-approval exists yet.
+The repository is preparing the bounded P6 Tokenizer v1 first-party corpus
+snapshot. The exact generator source has project-owner rights, safety, and
+contamination acceptance, but no snapshot is admitted and no training input,
+tokenizer artifact, or production approval exists yet.
 
 Repository validation is offline-capable and cannot grant authorization. The
 Python 3.11–3.13 CI and exact distribution boundary are defined in
@@ -30,11 +31,14 @@ The accepted next boundary is the two-stage, first-party-only snapshot process
 in
 [`docs/P6_FIRST_PARTY_SNAPSHOT_GATE.md`](docs/P6_FIRST_PARTY_SNAPSHOT_GATE.md).
 It requires exact generator-source acceptance before an exact 1,024-sample
-snapshot and tokenizer admission projection may be proposed. The stage-1 source
-proposal and its content-minimized pending review evidence are in
+snapshot and tokenizer admission projection may be proposed. The accepted
+stage-1 source and its content-minimized review evidence are in
 [`docs/P6_FIRST_PARTY_GENERATOR_SOURCE_EVIDENCE.md`](docs/P6_FIRST_PARTY_GENERATOR_SOURCE_EVIDENCE.md).
-No source approval record, snapshot, training run, or tokenizer artifact is
-approved by the implementation alone.
+The stage-2 candidate, exact dataset/replay identities, deterministic tokenizer
+projection, and pinned-verifier result are in
+[`docs/P6_FIRST_PARTY_SNAPSHOT_EVIDENCE.md`](docs/P6_FIRST_PARTY_SNAPSHOT_EVIDENCE.md).
+The candidate remains pending exact-head and exact-digest owner acceptance. No
+training run or tokenizer artifact is approved by the implementation alone.
 
 The broader proposed corpus policy permits only deterministic first-party
 generated fixtures and sources independently verified as public domain or CC0;
