@@ -20,11 +20,13 @@ REQUIRED_FILES = frozenset(
         "docs/P6_CI_VALIDATION_SCAFFOLD.md",
         "docs/P6_CORPUS_MANIFEST_CONTRACTS.md",
         "docs/P6_FIRST_PARTY_GENERATOR_SOURCE_EVIDENCE.md",
+        "docs/P6_FIRST_PARTY_SNAPSHOT_EVIDENCE.md",
         "docs/P6_FIRST_PARTY_SNAPSHOT_GATE.md",
         "docs/P6_FIXTURE_BUILDER_GATE.md",
         "docs/P6_TOKENIZER_CORPUS_GATE.md",
         "pyproject.toml",
         "scripts/validate_repository.py",
+        "scripts/verify_first_party_snapshot_admission.py",
         "scripts/verify_distribution.py",
         "src/cybersecgpt/datasets/__init__.py",
         "src/cybersecgpt/datasets/corpus_manifest.py",
@@ -118,6 +120,19 @@ def main() -> None:
         "SourceApprovalRecord" not in proposal
         and "build_fixture_corpus" not in proposal,
         "generator-source proposal must not create approvals or snapshots",
+    )
+    snapshot = (ROOT / "src/cybersecgpt/datasets/first_party_snapshot.py").read_text(
+        encoding="utf-8"
+    )
+    _require(
+        "cybersecgpt.tokenizer" not in snapshot,
+        "dataset package must not import the tokenizer package",
+    )
+    workflow = (ROOT / ".github/workflows/ci.yml").read_text(encoding="utf-8")
+    _require(
+        "0d3b1bff2328392a5b385b0c5b2bd7d08177b792" in workflow
+        and "persist-credentials: false" in workflow,
+        "snapshot verification must pin the credential-free tokenizer checkout",
     )
     print("Dataset repository validation passed.")
 

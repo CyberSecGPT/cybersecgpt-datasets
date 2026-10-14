@@ -62,4 +62,16 @@ Stage 1 is the exact source proposal in
 [`P6_FIRST_PARTY_GENERATOR_SOURCE_EVIDENCE.md`](P6_FIRST_PARTY_GENERATOR_SOURCE_EVIDENCE.md).
 Eight static generator families are bound to a caller-supplied accepted Git
 revision and expose only content-minimized counts and digests for review. They
-create no source approval record and do not invoke the snapshot builder.
+were accepted at PR #7 head
+`1e67188772c9960900769d6e3f74e615c593d049`, squash-merged as
+`d01118721ff9f28fdc895b7a76687eb88a9055fe`, and passed pre/post-merge CI
+runs 11 and 12.
+
+Stage 2 is the separately reviewed candidate in
+[`P6_FIRST_PARTY_SNAPSHOT_EVIDENCE.md`](P6_FIRST_PARTY_SNAPSHOT_EVIDENCE.md).
+It materializes the eight approved source records, constructs and replays the
+exact 1,024-sample snapshot in memory, and performs a pure projection into the
+pinned tokenizer admission schema. The production package has no tokenizer
+dependency; exact-byte admission occurs only in an isolated verifier using the
+exact local tokenizer revision. Dataset and verifier output remain evidence,
+not authorization, snapshot admission, or training approval.

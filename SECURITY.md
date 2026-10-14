@@ -46,8 +46,17 @@ Missing, excluded, duplicate, reordered, changed, rights-ineligible, unsafe,
 cancelled, expired, over-limit, projection-mismatched, or replay-mismatched
 content blocks the whole candidate and cannot be retried under weaker controls.
 
-The stage-1 generator proposal consumes no external input and requires its exact
-accepted Git revision as an explicit argument. Its automated evidence contains
-only identities, counts, byte counts, domain counts, and digests. A zero unsafe
-or duplicate count cannot approve rights, safety, or contamination; no approved
-source record exists until the owner accepts the exact proposal head.
+The stage-1 generator source consumes no external input and requires its exact
+accepted Git revision as an explicit argument. The owner accepted PR #7 head
+`1e67188772c9960900769d6e3f74e615c593d049` for the five recorded use
+decisions plus safety and contamination. Approved source records must bind that
+exact decision; a zero automated finding remains only defence-in-depth evidence.
+
+The stage-2 snapshot candidate builds and replays only those eight exact records
+in memory, requires 1,024 safe unique samples with zero exclusions, and maps
+rights and safety decisions fail closed into the tokenizer admission schema.
+Its isolated cross-repository verifier uses the exact local tokenizer commit,
+blocks socket creation during construction/admission, and compares canonical
+projection bytes before exact local-byte admission. The package adds no peer or
+provider dependency, and neither a valid projection nor successful admission
+can authorize training, execution, artifact promotion, or any policy widening.

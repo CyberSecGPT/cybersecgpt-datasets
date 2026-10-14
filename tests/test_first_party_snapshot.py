@@ -3,6 +3,7 @@
 from collections import Counter
 from dataclasses import replace
 from hashlib import sha256
+from pathlib import Path
 
 import pytest
 
@@ -26,11 +27,14 @@ from cybersecgpt.datasets import (
     approved_first_party_sources,
     build_first_party_snapshot,
     first_party_generator_evidence,
+    first_party_generators,
     first_party_snapshot_evidence,
+    generate_fixtures,
     project_tokenizer_admission_manifest,
 )
 
 IMPLEMENTATION_REVISION = "2" * 40
+EVIDENCE_IMPLEMENTATION_REVISION = "cfda1cea94e0501a2b9c67491d47e04294ce35d8"
 FINE_DOMAIN_COUNTS = {
     "assembly": 32,
     "code": 32,
@@ -197,6 +201,28 @@ def test_content_minimized_evidence_is_revision_bound() -> None:
         != evidence.tokenizer_admission_manifest_sha256
     )
     assert not hasattr(evidence, "content")
+
+
+def test_documented_snapshot_evidence_matches_without_raw_samples() -> None:
+    evidence = first_party_snapshot_evidence(EVIDENCE_IMPLEMENTATION_REVISION)
+    document = (
+        Path(__file__).resolve().parents[1]
+        / "docs"
+        / "P6_FIRST_PARTY_SNAPSHOT_EVIDENCE.md"
+    ).read_text(encoding="utf-8")
+    assert evidence.dataset_implementation_revision in document
+    assert evidence.owner_acceptance_sha256 in document
+    assert evidence.dataset_manifest_sha256 in document
+    assert evidence.dataset_replay_sha256 in document
+    assert evidence.tokenizer_admission_manifest_sha256 == (
+        "a2f676b2717e86717d469b9274b91cb3c3bf48daf58e83efe97221e4d5a7151a"
+    )
+    assert evidence.tokenizer_admission_manifest_sha256 in document
+    assert all(
+        fixture.content.decode("utf-8").strip() not in document
+        for generator in first_party_generators(ACCEPTED_GENERATOR_SOURCE_REVISION)
+        for fixture in generate_fixtures(generator)
+    )
 
 
 @pytest.mark.parametrize(

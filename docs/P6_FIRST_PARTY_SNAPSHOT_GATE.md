@@ -258,3 +258,7 @@ The snapshot-evidence increment must provide:
 Snapshot acceptance authorizes only a separately proposed and reviewed
 Tokenizer v1 training-run gate. It does not itself authorize training, artifact
 promotion, signing, final Tokenizer v1 selection, model training, or P7 work.
+
+The separately reviewed candidate and its exact dataset, replay, projection,
+and pinned-verifier identities are recorded in
+[`P6_FIRST_PARTY_SNAPSHOT_EVIDENCE.md`](P6_FIRST_PARTY_SNAPSHOT_EVIDENCE.md).

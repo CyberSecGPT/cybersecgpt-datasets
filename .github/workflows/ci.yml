@@ -21,6 +21,14 @@ jobs:
       - name: Check out Datasets
         uses: actions/checkout@v7
 
+      - name: Check out pinned Tokenizer admission verifier
+        uses: actions/checkout@v7
+        with:
+          repository: CyberSecGPT/cybersecgpt-tokenizer
+          ref: 0d3b1bff2328392a5b385b0c5b2bd7d08177b792
+          path: .peer/cybersecgpt-tokenizer
+          persist-credentials: false
+
       - name: Set up Python
         uses: actions/setup-python@v7
         with:
@@ -57,6 +65,11 @@ jobs:
           --cov=cybersecgpt.datasets
           --cov-report=term-missing
           --cov-fail-under=100
+
+      - name: Verify exact first-party snapshot admission offline
+        env:
+          PYTHONPATH: ${{ github.workspace }}/src:${{ github.workspace }}/.peer/cybersecgpt-tokenizer/src
+        run: python scripts/verify_first_party_snapshot_admission.py
 
   build:
     name: Build distributions

@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- Add the eight owner-approved first-party source records, exact in-memory
+  1,024-sample snapshot/replay identity, deterministic tokenizer admission
+  projection, and pinned local-verifier evidence without training authority or
+  raw corpus publication.
+
 - Add the exact eight-family first-party generator-source proposal for 1,024
   bounded in-memory samples, with deterministic content-minimized review
   evidence and no pre-recorded approval or snapshot admission.
